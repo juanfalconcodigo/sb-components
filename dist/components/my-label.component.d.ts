@@ -1,15 +1,7 @@
+/// <reference types="react" />
 import './my-label.component.css';
-type SizeType =
-    | 'normal'
-    | 'h1'
-    | 'h2'
-    | 'h3'
-
-type ColorsType =
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-
+declare type SizeType = 'normal' | 'h1' | 'h2' | 'h3';
+declare type ColorsType = 'primary' | 'secondary' | 'tertiary';
 export interface MyLabelComponentProps {
     /**
      *Content Label
@@ -36,12 +28,8 @@ export interface MyLabelComponentProps {
   */
     backgroundColor?: string;
 }
-
 /**
  * Primary UI component for label interaction
  */
-export const MyLabelComponent = ({ label = "Not found Label", size = "normal", allCaps = false, color = "primary", fontColor, backgroundColor }: MyLabelComponentProps) => {
-    return (
-        <span className={`label ${size} text-${color} ${allCaps ? 'text-capitalize' : ''}`} style={{ color: fontColor, backgroundColor }}>{label}</span>
-    );
-}
+export declare const MyLabelComponent: ({ label, size, allCaps, color, fontColor, backgroundColor }: MyLabelComponentProps) => JSX.Element;
+export {};
