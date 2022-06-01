@@ -45,3 +45,5 @@ export const MyLabelComponent = ({ label = "Not found Label", size = "normal", a
         <span className={`label ${size} text-${color} ${allCaps ? 'text-capitalize' : ''}`} style={{ color: fontColor, backgroundColor }}>{label}</span>
     );
 }
+
+export default MyLabelComponent;
